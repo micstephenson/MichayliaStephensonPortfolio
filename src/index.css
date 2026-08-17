@@ -3,7 +3,7 @@
    IMPORTS & FONTS
    ======================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -44,9 +44,10 @@
   --line: rgba(29, 27, 29, 0.18);
 
   /* Fonts */
-  --display: "Avigea", "Playfair Display", Georgia, serif;
-  --hand: "Honfleur", "Comic Sans MS", cursive;
+  --display: "Playfair Display", Georgia, serif;
+  --hand: "Caveat", "Comic Sans MS", cursive;
   --body: "DM Sans", "ProximaNova", Arial, sans-serif;
+}
 
 /* ========================================
    GLOBAL & RESET STYLES
@@ -937,7 +938,7 @@ footer .handwritten {
 .loader-name {
   font-family: var(--hand);
   font-size: clamp(2rem, 4vw, 4rem);
-  color: var(--pink-dark);
+  color: var(--pink-deep);
   margin: 20px 0 0;
 }
 
@@ -954,7 +955,7 @@ footer .handwritten {
 .loader-fill {
   position: absolute;
   inset: 0;
-  background: var(--pink-dark);
+  background: var(--pink-deep);
   transform: scaleX(0);
   transform-origin: left;
   border-radius: 999px;
@@ -1586,5 +1587,4 @@ footer .handwritten {
   .scroll-rail {
     display: none;
   }
-}
 }
