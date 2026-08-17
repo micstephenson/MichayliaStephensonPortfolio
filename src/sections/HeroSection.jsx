@@ -1,0 +1,29 @@
+import StaticButterflies from "../components/StaticButterflies";
+
+export default function HeroSection() {
+  return (
+    <section className="hero section-grid">
+      <StaticButterflies count={5} />
+      <div className="hero-copy">
+        <span className="eyebrow handwritten">Hey I'm</span>
+        <h1>Michaylia<br /><span>Stephenson</span></h1>
+        <p className="hero-kicker">
+          A software engineering student turning curious ideas into playful,
+          thoughtful digital experiences.
+        </p>
+        <button className="scroll-button" onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}>
+          <span>Scroll</span><span>↓</span>
+        </button>
+      </div>
+      <div className="hero-photo">
+        <div className="photo-note handwritten">more about<br />me →</div>
+        <div className="photo-frame">
+          <img src="/images/me.jpg" alt="Michaylia Stephenson" />
+        </div>
+        <span className="photo-caption">creative mind / code enthusiast</span>
+      </div>
+      <div className="hero-doodle doodle-one">✦</div>
+      <div className="hero-doodle doodle-two">✿</div>
+    </section>
+  );
+}
