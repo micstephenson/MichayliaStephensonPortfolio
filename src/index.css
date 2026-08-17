@@ -682,6 +682,20 @@ a {
   line-height: 1.2;
 }
 
+.contact-link-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
 .contact-link-icon {
   width: 22px;
   height: 22px;
@@ -698,6 +712,63 @@ a {
 
 .contact-links a:hover {
   color: var(--pink-deep);
+}
+
+.contact-link-button:hover {
+  color: var(--pink-deep);
+}
+
+.email-button:focus-visible,
+.contact-link-button:focus-visible {
+  outline: 2px dashed var(--ink);
+  outline-offset: 3px;
+}
+
+.post-it-note {
+  --post-it-color: var(--yellow);
+  position: absolute;
+  right: -30px;
+  top: 18px;
+  width: min(220px, 70vw);
+  background: var(--post-it-color);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px 14px 12px;
+  transform: translateY(-20px) rotate(5deg) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+  z-index: 6;
+}
+
+.post-it-note p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.post-it-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 58px;
+  height: 18px;
+  transform: translateX(-50%) rotate(-5deg);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(20, 20, 20, 0.22);
+}
+
+.post-it-note.is-visible {
+  opacity: 1;
+  transform: translateY(0) rotate(2deg) scale(1);
+}
+
+.email-button,
+.contact-link-button {
+  border-radius: 0;
 }
 /* ========================================
    FOOTER
@@ -1503,6 +1574,22 @@ footer .handwritten {
 
   .contact h2 {
     font-size: clamp(70px, 16vw, 110px);
+  }
+
+  .contact-inner {
+    padding-bottom: 92px;
+  }
+
+  .post-it-note {
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 0;
+    transform: translate(-50%, -20px) rotate(5deg) scale(0.9);
+  }
+
+  .post-it-note.is-visible {
+    transform: translate(-50%, 0) rotate(2deg) scale(1);
   }
 
   /* Footer */

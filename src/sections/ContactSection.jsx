@@ -1,6 +1,41 @@
+import { useState } from "react";
 import StaticButterflies from "../components/StaticButterflies";
+import PostItNote from "../components/PostItNote";
+
+const EMAIL_ADDRESS = "michayliastephenson@gmail.com";
+
+function copyWithFallback(value) {
+  const textarea = document.createElement("textarea");
+  textarea.value = value;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "absolute";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  const copied = document.execCommand("copy");
+  document.body.removeChild(textarea);
+  return copied;
+}
 
 export default function ContactSection() {
+  const [showClipboardNote, setShowClipboardNote] = useState(false);
+
+  const handleEmailCopy = async () => {
+    let copied = false;
+
+    try {
+      await navigator.clipboard.writeText(EMAIL_ADDRESS);
+      copied = true;
+    } catch {
+      copied = copyWithFallback(EMAIL_ADDRESS);
+    }
+
+    if (copied) {
+      setShowClipboardNote(false);
+      window.requestAnimationFrame(() => setShowClipboardNote(true));
+    }
+  };
+
   return (
     <section id="contact" className="contact pink-section">
       <StaticButterflies count={7} />
@@ -9,12 +44,13 @@ export default function ContactSection() {
         <h2>Let's make<br /><em>something.</em></h2>
         <p>I would love to work with you!</p>
         <div className="contact-actions">
-          <a 
-            className="email-button" 
-            href="mailto:michayliastephenson@gmail.com?subject=Let's%20work%20together"
+          <button
+            type="button"
+            className="email-button"
+            onClick={handleEmailCopy}
           >
             EMAIL ME <span>↗</span>
-          </a>
+          </button>
           <a className="email-button cv-button" href="/Michaylia-Stephenson-CV-2026.pdf" download>
             DOWNLOAD MY CV <span>↓</span>
           </a>
@@ -36,15 +72,21 @@ export default function ContactSection() {
             </span>
             <span>LinkedIn ↗</span>
           </a>
-          <a href="mailto:michayliastephenson@gmail.com?subject=Let's%20work%20together">
+          <button type="button" className="contact-link-button" onClick={handleEmailCopy}>
             <span className="contact-link-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
                 <path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.06-8 5-8-5V6l8 5 8-5v2.06Z" />
               </svg>
             </span>
             <span>Email ↗</span>
-          </a>
+          </button>
         </div>
+        <PostItNote
+          message="added to clipboard"
+          color="var(--yellow)"
+          visible={showClipboardNote}
+          onClose={() => setShowClipboardNote(false)}
+        />
       </div>
     </section>
   );
