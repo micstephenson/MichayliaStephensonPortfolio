@@ -16,13 +16,14 @@ export default function AboutSection() {
           <img src="/images/mouse.svg" alt="scroll" />
         </button>
       </div>
+      
       <div className="about-photo">
-        <div className="photo-note handwritten">more about<br />me ↓</div>
         <div className="photo-frame">
           <img src="/images/me.jpg" alt="Michaylia Stephenson" />
         </div>
         <span className="photo-caption">creative mind / aspiring software engineer</span>
       </div>
+      {/* <div className="photo-note handwritten">more about<br />me ↓</div> */}
       <div className="about-doodle doodle-one">✦</div>
       <div className="about-doodle doodle-two">✿</div>
     </section>

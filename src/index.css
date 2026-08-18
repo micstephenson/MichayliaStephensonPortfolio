@@ -1648,6 +1648,20 @@ footer .handwritten {
     grid-template-columns: minmax(150px, 0.7fr) minmax(0, 2.3fr);
   }
 
+  .experience-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .info-card {
+    min-height: 320px;
+    padding: 20px;
+  }
+
+  .info-card h3 {
+    margin: 42px 0 18px;
+  }
+
   .about {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -1753,6 +1767,7 @@ footer .handwritten {
 
   .about {
     padding: 120px 22px 50px;
+    align-items: center;
   }
 
   .about-copy {
@@ -1768,6 +1783,7 @@ footer .handwritten {
   .about-photo {
     min-height: 430px;
     margin-top: 20px;
+    align-items: center;
   }
 
   .photo-frame {
@@ -1937,6 +1953,214 @@ footer .handwritten {
 
   .transition-butterfly-cloud {
     transform: scale(0.75);
+  }
+}
+
+/* ========================================
+   MEDIA QUERIES - max-width: 399px
+   ======================================== */
+
+@media (max-width: 399px) {
+  .nav {
+    top: 8px;
+    width: calc(100% - 12px);
+    padding: 8px 9px 8px 11px;
+  }
+
+  .about,
+  .experience,
+  .skills,
+  .contact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .projects {
+    padding-top: 70px;
+    padding-bottom: 86px;
+  }
+
+  .about {
+    padding-top: 106px;
+    padding-bottom: 36px;
+  }
+
+  .about-copy,
+  .section-label,
+  .skills-title,
+  .projects-heading {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .about h1 {
+    font-size: clamp(52px, 16vw, 66px);
+    line-height: 0.9;
+  }
+
+  .about-kicker {
+    font-size: 14px;
+    margin: 20px auto;
+  }
+
+  .photo-frame {
+    width: min(300px, 82vw);
+    height: 360px;
+  }
+
+  .experience-cards {
+    padding: 0;
+  }
+
+  .info-card {
+    min-height: 292px;
+    padding: 18px;
+  }
+
+  .info-card h3 {
+    margin: 34px 0 16px;
+    font-size: clamp(28px, 9vw, 38px);
+  }
+
+  .projects-heading {
+    margin-bottom: 26px;
+  }
+
+  .projects h2,
+  .skills h2,
+  .contact h2 {
+    font-size: clamp(52px, 15vw, 76px);
+  }
+
+  .project-track {
+    gap: 12px;
+    padding: 8px 5vw 46px;
+  }
+
+  .project-card {
+    width: 88vw;
+    min-width: 88vw;
+    min-height: 390px;
+    padding: 18px;
+  }
+
+  .project-card h3 {
+    font-size: clamp(38px, 12vw, 56px);
+    margin-bottom: 14px;
+  }
+
+  .project-card p:not(.project-type) {
+    font-size: 13px;
+  }
+
+  .skills-cloud {
+    padding: 0 2vw;
+    gap: 10px;
+  }
+
+  .skill-chip {
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+
+  .contact-actions {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .email-button {
+    width: min(100%, 320px);
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+
+  .contact-links {
+    gap: 14px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+  }
+
+  .post-it-note {
+    width: min(190px, 82vw);
+  }
+
+  .detail-hero {
+    padding-top: 32vw;
+  }
+
+  .detail-body,
+  .detail-grid,
+  .detail-actions,
+  .placement-stats,
+  .detail-section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .placement-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .app-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+/* ========================================
+   MEDIA QUERIES - max-width: 390px
+   ======================================== */
+
+@media (max-width: 390px) {
+  .nav {
+    width: calc(100% - 10px);
+    padding: 7px 8px 7px 10px;
+  }
+
+  .about,
+  .experience,
+  .skills,
+  .contact,
+  .projects {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .about-copy,
+  .section-label,
+  .skills-title,
+  .projects-heading {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .projects h2,
+  .skills h2,
+  .contact h2 {
+    font-size: clamp(48px, 14vw, 70px);
+  }
+
+  .project-track {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .project-card {
+    width: 86vw;
+    min-width: 86vw;
+    min-height: 370px;
+  }
+
+  .contact-inner {
+    padding-bottom: 82px;
+  }
+
+  .email-button {
+    width: 100%;
+    font-size: 12px;
+    padding: 12px 12px;
   }
 }
 

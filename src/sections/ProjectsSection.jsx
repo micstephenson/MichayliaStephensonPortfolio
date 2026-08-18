@@ -60,7 +60,12 @@ export default function ProjectsSection({ onNavigate }) {
       cards.forEach((el, i) => {
         gsap.fromTo(el, { opacity: 0, y: 55 }, {
           opacity: 1, y: 0, duration: .7, ease: "back.out(1.2)",
-          scrollTrigger: { trigger: el, containerAnimation: undefined, start: "top 90%", once: true }
+          scrollTrigger: { 
+            trigger: el, 
+            containerAnimation: undefined, 
+            start: "top bottom", 
+            once: true
+          }
         });
         gsap.to(el, {
           y: i % 2 ? -16 : 16,
