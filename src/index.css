@@ -401,6 +401,11 @@ a {
   overflow: hidden;
 }
 
+.experience {
+  min-height: 100svh;
+  padding: 80px 7vw 100px;
+}
+
 .section-label h2 {
   font-size: clamp(55px, 6.5vw, 105px);
   line-height: 0.94;
@@ -442,6 +447,14 @@ a {
   gap: 18px;
   align-items: stretch;
 }
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
 
 .info-card {
   min-height: 390px;
