@@ -19,6 +19,7 @@ function copyWithFallback(value) {
 
 export default function ContactSection() {
   const [showClipboardNote, setShowClipboardNote] = useState(false);
+  const emailHref = "mailto:michayliastephenson@gmail.com?subject=Let's%20work%20together";
 
   const copyEmailToClipboard = async () => {
     try {
@@ -29,11 +30,12 @@ export default function ContactSection() {
     }
   };
 
-  const handleEmailCopy = async () => {
-    if (await copyEmailToClipboard()) {
+  const handleEmailCopy = () => {
+    copyEmailToClipboard().then((copied) => {
+      if (!copied) return;
       setShowClipboardNote(false);
       window.requestAnimationFrame(() => setShowClipboardNote(true));
-    }
+    });
   };
 
   return (
@@ -44,13 +46,13 @@ export default function ContactSection() {
         <h2>Let's make<br /><em>something.</em></h2>
         <p>I would love to work with you!</p>
         <div className="contact-actions">
-          <button
-            type="button"
+          <a
             className="email-button"
+            href={emailHref}
             onClick={handleEmailCopy}
           >
             EMAIL ME <span>↗</span>
-          </button>
+          </a>
           <a className="email-button cv-button" href="/Michaylia-Stephenson-CV-2026.pdf" download>
             DOWNLOAD MY CV <span>↓</span>
           </a>
@@ -72,14 +74,14 @@ export default function ContactSection() {
             </span>
             <span>LinkedIn ↗</span>
           </a>
-          <button type="button" className="contact-link-button" onClick={handleEmailCopy}>
+          <a href={emailHref} className="contact-link-button" onClick={handleEmailCopy}>
             <span className="contact-link-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
                 <path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.06-8 5-8-5V6l8 5 8-5v2.06Z" />
               </svg>
             </span>
             <span>Email ↗</span>
-          </button>
+          </a>
         </div>
         <PostItNote
           message="added to clipboard"
