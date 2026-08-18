@@ -306,6 +306,12 @@ a {
   animation: scrollPulse 1.8s ease-in-out infinite;
 }
 
+.scroll-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .scroll-button:hover {
   transform: translateY(-3px) rotate(-2deg);
   background: var(--yellow);
