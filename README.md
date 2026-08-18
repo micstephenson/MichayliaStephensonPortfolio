@@ -1,7 +1,6 @@
 # Michaylia Stephenson Portfolio
 
-A React + GSAP portfolio mashup combining the original GSAP portfolio design with the loading, detail-page and transition interactions from the later portfolio version.
-
+A React + GSAP portfolio 
 ## Run
 
 ```bash
