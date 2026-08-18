@@ -241,7 +241,7 @@ a {
   position: relative;
 }
 
-.hero {
+.about {
   min-height: 100vh;
   padding: 140px 7vw 70px;
   align-items: center;
@@ -250,7 +250,7 @@ a {
     var(--paper);
 }
 
-.hero-copy {
+.about-copy {
   position: relative;
   z-index: 4;
   padding-left: 5vw;
@@ -263,8 +263,8 @@ a {
   margin-bottom: 5px;
 }
 
-.hero h1,
-.about h2,
+.about h1,
+.experience h2,
 .projects h2,
 .skills h2,
 .contact h2 {
@@ -275,18 +275,18 @@ a {
   letter-spacing: -0.045em;
 }
 
-.hero h1 {
+.about h1 {
   font-size: clamp(72px, 10vw, 150px);
 }
 
-.hero h1 span,
+.about h1 span,
 .projects h2 span,
 .skills h2 span {
   color: var(--pink-hot);
   display: inline-block;
 }
 
-.hero-kicker {
+.about-kicker {
   max-width: 440px;
   margin: 30px 0;
   font-size: clamp(15px, 1.5vw, 19px);
@@ -327,7 +327,7 @@ a {
   }
 }
 
-.hero-photo {
+.about-photo {
   min-height: 560px;
   position: relative;
   display: flex;
@@ -372,7 +372,7 @@ a {
   transform: rotate(-8deg);
 }
 
-.hero-doodle {
+.about-doodle {
   position: absolute;
   color: var(--pink-hot);
   font-size: 35px;
@@ -1635,12 +1635,12 @@ footer .handwritten {
     grid-template-columns: minmax(150px, 0.7fr) minmax(0, 2.3fr);
   }
 
-  .hero {
+  .about {
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
-  .hero-photo {
+  .about-photo {
     min-height: 500px;
   }
 
@@ -1738,21 +1738,21 @@ footer .handwritten {
     grid-template-columns: 1fr;
   }
 
-  .hero {
+  .about {
     padding: 120px 22px 50px;
   }
 
-  .hero-copy {
+  .about-copy {
     padding: 0 8vw;
     text-align: center;
   }
 
-  .hero-kicker {
+  .about-kicker {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .hero-photo {
+  .about-photo {
     min-height: 430px;
     margin-top: 20px;
   }
@@ -1762,8 +1762,8 @@ footer .handwritten {
     height: 420px;
   }
 
-  /* About & Skills */
-  .about,
+  /* Experience & Skills */
+  .experience,
   .skills {
     padding: 80px 22px;
     overflow: hidden;
@@ -1775,7 +1775,7 @@ footer .handwritten {
     margin-bottom: 50px;
   }
 
-  .about-cards {
+  .experience-cards {
     grid-template-columns: 1fr;
     padding: 0 5vw;
   }

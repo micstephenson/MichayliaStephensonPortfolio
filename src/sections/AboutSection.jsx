@@ -1,36 +1,30 @@
 import StaticButterflies from "../components/StaticButterflies";
 
-export default function AboutSection({ onNavigate }) {
+export default function AboutSection() {
   return (
-    <section id="experience" className="about section-grid pink-section">
-      <StaticButterflies count={6} />
-      <div className="section-label">
-        <span className="handwritten">01</span>
-        <h2>What<br />Am I<br /><em>Up To?</em></h2>
-      </div>
-      <div className="about-cards">
-        <button className="info-card card-yellow" onClick={() => onNavigate("/experience/placement")}>
-          <span className="card-tag">currently</span>
-          <h3>Industrial<br />Placement</h3>
-          <p>Building things, learning things and figuring out what kind of developer I want to become.</p>
-          <span className="card-arrow">↗</span>
-          <span className="learn-more">Learn more</span>
-        </button>
-        <button className="info-card card-white" onClick={() => onNavigate("/experience/university")}>
-          <span className="card-tag">education</span>
-          <h3>University<br />+ location</h3>
-          <p>Software engineering student with a love for ambitious interfaces and creative technology.</p>
-          <span className="card-arrow">↗</span>
-          <span className="learn-more">Learn more</span>
-        </button>
-        <button className="info-card card-pink" onClick={() => onNavigate("/experience/work")}>
-          <span className="card-tag">outside code</span>
-          <h3>Part Time<br />Jobs</h3>
-          <p>Customer-facing experience has taught me communication, resilience and how to keep things moving.</p>
-          <span className="card-arrow">↗</span>
-          <span className="learn-more">Learn more</span>
+    <section id="about" className="about section-grid">
+      <StaticButterflies count={5} />
+      <div className="about-copy">
+        <span className="eyebrow handwritten">Hey I'm</span>
+        <h1>Michaylia<br /><span>Stephenson</span></h1>
+        <p className="about-kicker">
+          A Final Year Software Engineering Student turning curious ideas into
+          thoughtful digital experiences.
+        </p>
+        <button className="scroll-button" onClick={() => document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" })}>
+          <span>Scroll</span>
+          <img src="/images/mouse.svg" alt="scroll" />
         </button>
       </div>
+      <div className="about-photo">
+        <div className="photo-note handwritten">more about<br />me ↓</div>
+        <div className="photo-frame">
+          <img src="/images/me.jpg" alt="Michaylia Stephenson" />
+        </div>
+        <span className="photo-caption">creative mind / aspiring software engineer</span>
+      </div>
+      <div className="about-doodle doodle-one">✦</div>
+      <div className="about-doodle doodle-two">✿</div>
     </section>
   );
 }
