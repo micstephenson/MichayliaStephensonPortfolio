@@ -20,17 +20,17 @@ function copyWithFallback(value) {
 export default function ContactSection() {
   const [showClipboardNote, setShowClipboardNote] = useState(false);
 
-  const handleEmailCopy = async () => {
-    let copied = false;
-
+  const copyEmailToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(EMAIL_ADDRESS);
-      copied = true;
+      return true;
     } catch {
-      copied = copyWithFallback(EMAIL_ADDRESS);
+      return copyWithFallback(EMAIL_ADDRESS);
     }
+  };
 
-    if (copied) {
+  const handleEmailCopy = async () => {
+    if (await copyEmailToClipboard()) {
       setShowClipboardNote(false);
       window.requestAnimationFrame(() => setShowClipboardNote(true));
     }

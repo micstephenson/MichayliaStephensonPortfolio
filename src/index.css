@@ -182,6 +182,28 @@ a {
   gap: 4px;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-menu-toggle {
+  display: none;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nav-menu-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--pink-deep);
+}
+
 .nav nav button,
 .nav nav a {
   padding: 9px 13px;
@@ -1448,16 +1470,51 @@ footer .handwritten {
     width: calc(100% - 20px);
   }
 
-  .nav nav button:not(:last-of-type) {
-    display: none;
-  }
-
   .nav nav {
     gap: 2px;
+    position: relative;
   }
 
-  .nav nav a {
+  .nav-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 9px;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: 210px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: rgba(255, 249, 251, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 18px;
+    box-shadow: 0 14px 30px rgba(20, 15, 22, 0.16);
+  }
+
+  .nav nav.is-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links button,
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 11px;
+  }
+
+  .nav-links .github-pill {
+    text-align: left;
+    color: white;
   }
 
   .brand {
