@@ -6,10 +6,6 @@ const apps = [
   ["Utility Belt", "13", "28,692", "60", "Razor · C#", "Designed and built Utility"],
   ["CVLink New", "4", "112", "32", "React · C# · .NET", "Majority bug fixes"],
   ["HGV Toolbox", "4", "684", "24", "React · C# · .NET", "Created new pages and functionality"],
-  ["SSO", "2", "156", "1", "React · C# · .NET", "Majority .NET upgrades"],
-  ["Client Portal", "1", "8", "7", "—", ".NET upgrades"],
-  ["Home/CVConnect", "1", "0", "1", "—", ".NET upgrades"],
-  ["Document Service", "1", "0", "1", "C#", ".NET upgrades"],
 ];
 
 export default function Placement({ onBack }) {
@@ -33,7 +29,7 @@ export default function Placement({ onBack }) {
         <div className="stat"><strong>53</strong><span>work items</span></div>
         <div className="stat"><strong>31,241</strong><span>net lines changed</span></div>
         <div className="stat"><strong>146</strong><span>commits</span></div>
-        <div className="stat"><strong>5+</strong><span>languages</span></div>
+        <div className="stat"><strong>Full-Stack</strong><span>developing</span></div>
       </section>
 
       <section className="detail-section">

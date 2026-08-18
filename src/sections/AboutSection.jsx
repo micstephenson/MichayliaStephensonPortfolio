@@ -3,7 +3,7 @@ import StaticButterflies from "../components/StaticButterflies";
 export default function AboutSection() {
   return (
     <section id="about" className="about section-grid">
-      <StaticButterflies count={5} />
+      <StaticButterflies count={3} />
       <div className="about-copy">
         <span className="eyebrow handwritten">Hey I'm</span>
         <h1>Michaylia<br /><span>Stephenson</span></h1>

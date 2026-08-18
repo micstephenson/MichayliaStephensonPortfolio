@@ -3,7 +3,7 @@ import StaticButterflies from "../components/StaticButterflies";
 export default function ExperienceSection({ onNavigate }) {
   return (
     <section id="experience" className="experience section-grid pink-section">
-      <StaticButterflies count={6} />
+      <StaticButterflies count={4} />
       <div className="section-label">
         <span className="handwritten">01</span>
         <h2>What<br />Am I<br /><em>Up To?</em></h2>

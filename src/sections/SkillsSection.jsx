@@ -37,7 +37,7 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="skills section-grid">
-      <StaticButterflies count={6} />
+      <StaticButterflies count={4} />
       <div className="skills-title">
         <span className="section-kicker">03 / toolbox</span>
         <h2>I Code<br /><span>+ create in</span></h2>

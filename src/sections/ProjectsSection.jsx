@@ -77,7 +77,7 @@ export default function ProjectsSection({ onNavigate }) {
 
   return (
     <section id="projects" ref={projectSection} className="projects pink-section project-flavor">
-      <StaticButterflies count={5} />
+      <StaticButterflies count={3} />
       <div className="projects-heading">
         <span className="section-kicker">02 / selected projects</span>
         <h2>Things I've<br /><span>made.</span></h2>
