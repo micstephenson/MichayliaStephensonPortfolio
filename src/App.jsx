@@ -33,16 +33,37 @@ export default function App() {
   const [transitioning, setTransitioning] = useState(false);
   const [introDone, setIntroDone] = useState(false);
 
+  const forceScrollTop = () => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  };
+
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     const onPop = () => {
       setCurrent(route());
       setTransitioning(false);
-      window.scrollTo(0, 0);
+      forceScrollTop();
       requestAnimationFrame(() => ScrollTrigger.refresh());
     };
     window.addEventListener("popstate", onPop);
-    return () => window.removeEventListener("popstate", onPop);
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "auto";
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    forceScrollTop();
+    requestAnimationFrame(() => forceScrollTop());
+    requestAnimationFrame(() => ScrollTrigger.refresh());
+  }, [current.type, current.slug]);
 
   const navigate = (path) => {
     if (transitioning || path === window.location.pathname) return;
@@ -51,9 +72,11 @@ export default function App() {
     window.setTimeout(() => {
       window.history.pushState({}, "", path);
       setCurrent(route());
-      window.scrollTo(0, 0);
+      forceScrollTop();
       window.setTimeout(() => {
         setTransitioning(false);
+        forceScrollTop();
+        requestAnimationFrame(() => forceScrollTop());
         ScrollTrigger.refresh();
       }, 720);
     }, 620);

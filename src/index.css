@@ -147,10 +147,11 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 9px 11px 9px 15px;
-  background: rgba(255, 249, 251, 0.88);
+  background: rgba(255, 249, 251, 0.56);
   border: 1px solid var(--line);
   border-radius: 999px;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
   box-shadow: 0 12px 40px rgba(201, 31, 91, 0.08);
 }
 
@@ -198,7 +199,7 @@ a {
   display: none;
   padding: 9px 13px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.52);
   border: 1px solid var(--line);
   font-size: 12px;
   font-weight: 700;
@@ -1652,10 +1653,10 @@ footer .handwritten {
     align-items: stretch;
     gap: 2px;
     padding: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.34);
-    background: rgba(255, 249, 251, 0.72);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 249, 251, 0.54);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
     border-radius: 18px;
     box-shadow: 0 14px 30px rgba(20, 15, 22, 0.16);
   }
