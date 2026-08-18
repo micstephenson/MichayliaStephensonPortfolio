@@ -620,6 +620,13 @@ a {
   font-size: clamp(75px, 9vw, 140px);
 }
 
+.skills-hint {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: var(--pink-deep);
+  font-family: var(--hand);
+}
+
 .skills-cloud {
   display: flex;
   flex-wrap: wrap;

@@ -41,6 +41,7 @@ export default function SkillsSection() {
       <div className="skills-title">
         <span className="section-kicker">03 / toolbox</span>
         <h2>Code<br /><span>+ create.</span></h2>
+        <p className="skills-hint">*tap a skill (🦋)*</p>
       </div>
       <div className="skills-cloud">
         {skills.map((skill, i) => (
