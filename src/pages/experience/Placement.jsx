@@ -33,7 +33,7 @@ export default function Placement({ onBack }) {
         <div className="stat"><strong>53</strong><span>work items</span></div>
         <div className="stat"><strong>31,241</strong><span>net lines changed</span></div>
         <div className="stat"><strong>146</strong><span>commits</span></div>
-        <div className="stat"><strong>69</strong><span>placement tickets</span></div>
+        <div className="stat"><strong>5+</strong><span>languages</span></div>
       </section>
 
       <section className="detail-section">
