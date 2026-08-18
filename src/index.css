@@ -446,6 +446,13 @@ a {
   transform: rotate(var(--rotation, 0deg));
   box-shadow: 10px 10px 0 rgba(201, 31, 91, 0.18);
   text-align: left;
+  cursor: url('/images/Butterfly3.svg') 15 10, pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: rotate(var(--rotation, 0deg)) scale(1.05);
+  box-shadow: 15px 15px 0 rgba(201, 31, 91, 0.25);
 }
 
 .info-card:nth-child(2) {
@@ -504,6 +511,23 @@ a {
   right: 18px;
   font-size: 25px;
 }
+
+.learn-more {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .learn-more {
+  color: var(--pink-hot);
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(237, 63, 118, 0.5);
+}
 /* ========================================
    PROJECTS SECTION
    ======================================== */
@@ -552,9 +576,10 @@ a {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  cursor: pointer;
+  cursor: url('/images/Butterfly3.svg') 15 10, pointer;
   flex-shrink: 0;
   will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-main {
@@ -563,14 +588,29 @@ a {
   transform: rotate(-1deg);
 }
 
+.project-main:hover {
+  transform: rotate(-1deg) scale(1.05);
+  box-shadow: 15px 15px 0 rgba(201, 31, 91, 0.25);
+}
+
 .project-small {
   background: var(--yellow);
   transform: translateY(35px) rotate(1deg);
 }
 
+.project-small:hover {
+  transform: translateY(35px) rotate(1deg) scale(1.05);
+  box-shadow: 15px 15px 0 rgba(201, 31, 91, 0.25);
+}
+
 .light-card {
   background: var(--paper);
   transform: rotate(-1deg);
+}
+
+.light-card:hover {
+  transform: rotate(-1deg) scale(1.05);
+  box-shadow: 15px 15px 0 rgba(201, 31, 91, 0.25);
 }
 
 .project-number {

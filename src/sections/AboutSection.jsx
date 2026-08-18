@@ -14,18 +14,21 @@ export default function AboutSection({ onNavigate }) {
           <h3>Industrial<br />Placement</h3>
           <p>Building things, learning things and figuring out what kind of developer I want to become.</p>
           <span className="card-arrow">↗</span>
+          <span className="learn-more">Learn more</span>
         </button>
         <button className="info-card card-white" onClick={() => onNavigate("/experience/university")}>
           <span className="card-tag">education</span>
           <h3>University<br />+ location</h3>
           <p>Software engineering student with a love for ambitious interfaces and creative technology.</p>
           <span className="card-arrow">↗</span>
+          <span className="learn-more">Learn more</span>
         </button>
         <button className="info-card card-pink" onClick={() => onNavigate("/experience/work")}>
           <span className="card-tag">outside code</span>
           <h3>Part Time<br />Jobs</h3>
           <p>Customer-facing experience has taught me communication, resilience and how to keep things moving.</p>
           <span className="card-arrow">↗</span>
+          <span className="learn-more">Learn more</span>
         </button>
       </div>
     </section>
