@@ -40,7 +40,7 @@ export default function SkillsSection() {
       <StaticButterflies count={6} />
       <div className="skills-title">
         <span className="section-kicker">03 / toolbox</span>
-        <h2>Code<br /><span>+ create.</span></h2>
+        <h2>I Code<br /><span>+ create in</span></h2>
         <p className="skills-hint">*tap a skill (🦋)*</p>
       </div>
       <div className="skills-cloud">

@@ -65,7 +65,7 @@ export default function App() {
     requestAnimationFrame(() => ScrollTrigger.refresh());
   }, [current.type, current.slug]);
 
-  const navigate = (path) => {
+  const navigate = (path, onComplete) => {
     if (transitioning || path === window.location.pathname) return;
     setTransitioning(true);
 
@@ -78,14 +78,18 @@ export default function App() {
         forceScrollTop();
         requestAnimationFrame(() => forceScrollTop());
         ScrollTrigger.refresh();
+        if (onComplete) {
+          window.setTimeout(() => onComplete(), 50);
+        }
       }, 720);
     }, 620);
   };
 
   const scrollTo = (selector) => {
     if (current.type !== "home") {
-      navigate("/");
-      window.setTimeout(() => document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" }), 750);
+      navigate("/", () => {
+        document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
+      });
       return;
     }
     document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
