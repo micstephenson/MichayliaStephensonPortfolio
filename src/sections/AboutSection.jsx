@@ -2,7 +2,7 @@ import StaticButterflies from "../components/StaticButterflies";
 
 export default function AboutSection({ onNavigate }) {
   return (
-    <section id="about" className="about section-grid pink-section">
+    <section id="experience" className="about section-grid pink-section">
       <StaticButterflies count={6} />
       <div className="section-label">
         <span className="handwritten">01</span>

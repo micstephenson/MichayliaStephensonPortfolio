@@ -2,7 +2,7 @@ import StaticButterflies from "../components/StaticButterflies";
 
 export default function HeroSection() {
   return (
-    <section className="hero section-grid">
+    <section id="about" className="hero section-grid">
       <StaticButterflies count={5} />
       <div className="hero-copy">
         <span className="eyebrow handwritten">Hey I'm</span>

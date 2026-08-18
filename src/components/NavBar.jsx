@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const items = [
   ["About", "#about"],
-  ["Experience", "#about"],
+  ["Experience", "#experience"],
   ["Projects", "#projects"],
   ["Contact me", "#contact"],
 ];
