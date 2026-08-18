@@ -40,7 +40,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="contact pink-section">
-      <StaticButterflies count={4} />
+      <StaticButterflies count={2} />
       <div className="contact-inner">
         <span className="section-kicker">04 / contact me</span>
         <h2>Let's make<br /><em>something.</em></h2>

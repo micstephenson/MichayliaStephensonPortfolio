@@ -51,7 +51,6 @@ export default function FlyingButterflies() {
     <div ref={root} className="roaming-layer" aria-hidden="true">
       <Butterfly className="roaming-butterfly roam-one" size="small" />
       <Butterfly className="roaming-butterfly roam-two" size="tiny" />
-      <Butterfly className="roaming-butterfly roam-three" size="small" />
     </div>
   );
 }

@@ -77,11 +77,12 @@ export default function ProjectsSection({ onNavigate }) {
 
   return (
     <section id="projects" ref={projectSection} className="projects pink-section project-flavor">
-      <StaticButterflies count={3} />
+      <StaticButterflies count={2} />
       <div className="projects-heading">
         <span className="section-kicker">02 / selected projects</span>
         <h2>Things I've<br /><span>made.</span></h2>
       </div>
+      
       <div ref={track} className="project-track">
         {projects.map((p) => (
           <button key={p.slug} className={`project-card ${p.className}`} onClick={() => onNavigate(`/projects/${p.slug}`)}>
